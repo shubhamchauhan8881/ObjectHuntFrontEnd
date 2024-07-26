@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Detective Theme */
+  .bg-dark-blue {
+    background-color: #2C3E50;
+  }
+  .btn-gold {
+    background-color: #F39C12;
+    color: #ECF0F1;
+  }
+
+  /* Natural Theme */
+  .bg-forest-green {
+    background-color: #2E8B57;
+  }
+  .btn-brown {
+    background-color: #8B4513;
+    color: #FFFFFF;
+  }
+
+  /* Adventurous Theme */
+  .bg-deep-orange {
+    background-color: #FF5722;
+  }
+  .btn-sky-blue {
+    background-color: #87CEEB;
+    color: #FFFFFF;
+  }
+}
 
 @layer base{
     .bungee {
