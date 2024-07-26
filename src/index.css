@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    .bungee {
+      font-family: "Bungee Spice", sans-serif;
+      font-style: normal;
+    }
+
+    *{
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    body{
+        background-color:#252525;
+        color:white;
+    }
+
+}
