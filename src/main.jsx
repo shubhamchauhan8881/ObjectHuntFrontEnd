@@ -5,7 +5,7 @@ import './index.css';
 import {Layout} from "./Layout.jsx";
 
 import HomePage from './pages/HomePage.jsx';
-
+import PopupContextProvider from './context/PopupContextProvider.jsx';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <PopupContextProvider>
+            <RouterProvider router={router} />
+        </PopupContextProvider>
     </React.StrictMode>,
 )

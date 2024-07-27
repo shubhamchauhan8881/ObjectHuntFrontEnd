@@ -32,15 +32,14 @@
 }
 
 @layer base{
-    .bungee {
-      font-family: "Bungee Spice", sans-serif;
-      font-style: normal;
-    }
-
     *{
         font-family: "Poppins", sans-serif;
         font-style: normal;
         font-weight: 400;
+    }
+
+    html {
+      font-family: "Bungee Shade", sans-serif;
     }
 
     body{
@@ -48,4 +47,30 @@
         color:white;
     }
 
+}
+
+
+
+@layer utilities {
+
+  
+
+  .stylish-btn{
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em black;
+    cursor: pointer;
+  }
+ 
+  .stylish-btn:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em black;
+  }
+  
+  .stylish-btn:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em black;
+  }
 }
