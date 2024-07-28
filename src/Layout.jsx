@@ -1,5 +1,6 @@
 import {Outlet} from "react-router-dom";
 import PopUp from "./components/PopUp";
+import SettingsButton from "./components/SettingsButton";
 
 export const Layout = () => {
     return (
@@ -8,6 +9,7 @@ export const Layout = () => {
         
             {/* opop */}
             <PopUp/>
+            <SettingsButton/>
         </div>
     )
 }

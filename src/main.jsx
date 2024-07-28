@@ -6,6 +6,9 @@ import {Layout} from "./Layout.jsx";
 
 import HomePage from './pages/HomePage.jsx';
 import PopupContextProvider from './context/PopupContextProvider.jsx';
+import GameContextProvider from './context/GameContextProvider.jsx';
+import PlayPage from './pages/PlayPage.jsx'
+import GamePage from './pages/GamePage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +19,14 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<HomePage />,
+            },
+            {
+                path:'/play',
+                element:<PlayPage />,
+            },
+            {
+                path:'/game',
+                element:<GamePage/>
             }
         ]
     }
@@ -24,8 +35,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <PopupContextProvider>
-            <RouterProvider router={router} />
-        </PopupContextProvider>
+        <GameContextProvider>
+            <PopupContextProvider>
+                <RouterProvider router={router} />
+            </PopupContextProvider>
+        </GameContextProvider>
     </React.StrictMode>,
 )

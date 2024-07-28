@@ -2,6 +2,9 @@ import React, { useContext, useRef } from 'react'
 import PopupContext from '../context/PopupContext';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
+import AskNameForGuest from '../pages/AskNameForGuest';
+import SettingsPage from '../pages/SettingsPage';
+import AskRoomCode from './AskRoomCode';
 
 export default function PopUp(){
 
@@ -11,7 +14,10 @@ export default function PopUp(){
 
     const hmap = {
         "login": <LoginPage />,
-        "register": <RegisterPage />
+        "register": <RegisterPage />,
+        "askName": <AskNameForGuest/>,
+        "settings":<SettingsPage/>,
+        "askRoomCode": <AskRoomCode/>
     }
  
     const handleHiding = (e)=>{
@@ -19,8 +25,8 @@ export default function PopUp(){
     };
 
     return (
-        <div ref={bg} onClick={handleHiding} className={ isVisible ? 'absolute top-0 left-0 right-0 bottom-0 bg-accent/50 flex items-center justify-center':"hidden"}>
-            <div className='content-wrapper bg-accent shadow-secondary shadow-lg border border-white rounded-md relative'>
+        <div ref={bg} onClick={handleHiding} className={ isVisible ? 'absolute top-0 left-0 right-0 bottom-0 bg-secondary/50 flex items-center justify-center backdrop-blur-sm px-8':"hidden"}>
+            <div className='content-wrapper bg-accent shadow-white shadow-md rounded-md relative w-full'>
                 <div className="absolute right-1 top-1">
                     <button  onClick={()=>HidePopUp()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 text-error">

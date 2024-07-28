@@ -4,6 +4,8 @@ export default function PopupContextProvider({children}) {
     const [isVisible, setIsVisible] = useState(false);
     const [page, setPage] = useState(null);
 
+   
+
     const ShowPopUp = (name) =>{
       setIsVisible(true);
       setPage(name);
@@ -18,7 +20,7 @@ export default function PopupContextProvider({children}) {
         ShowPopUp,
         HidePopUp,
         isVisible,
-        page
+        page,
     }
 
   return (

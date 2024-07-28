@@ -16,7 +16,6 @@ export default function LoginPage() {
           <span>Your Email</span>
           <input
             type="text"
-            placeholder="your email"
             className="input input-bordered input-seconadary bg-transparent w-full " />
         </div>
 
@@ -24,7 +23,6 @@ export default function LoginPage() {
           <span>Your Passoword</span>
           <input
             type="text"
-            placeholder="your email"
             className="input input-bordered input-seconadary bg-transparent w-full " />
         </div>
 

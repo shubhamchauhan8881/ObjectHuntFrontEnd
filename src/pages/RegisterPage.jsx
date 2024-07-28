@@ -14,7 +14,6 @@ export default function RegisterPage() {
           <span>Your Name</span>
           <input
             type="text"
-            placeholder="your email"
             className="input input-bordered input-seconadary bg-transparent w-full " />
         </div>
 
@@ -22,7 +21,6 @@ export default function RegisterPage() {
           <span>Your Email</span>
           <input
             type="text"
-            placeholder="your email"
             className="input input-bordered input-seconadary bg-transparent w-full " />
         </div>
 
@@ -30,7 +28,6 @@ export default function RegisterPage() {
           <span>Your Passoword</span>
           <input
             type="text"
-            placeholder="your email"
             className="input input-bordered input-seconadary bg-transparent w-full " />
         </div>
 
