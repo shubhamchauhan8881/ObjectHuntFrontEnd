@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import logo from '../assets/ObjHuntLogo.png';
+import logo from '../assets/lo.png';
 import Footer from '../components/Footer';
 import PopupContext from '../context/PopupContext';
 import { Link } from 'react-router-dom';
@@ -11,12 +11,12 @@ export default function PlayPage() {
     <div className='bg-accent h-full flex flex-col justify-evenly items-center'>
 
     <div className='flex flex-col justify-evenly items-center'>
-      <img src={logo} alt='Object Hunt Logo' className='logo' />
+      <img src={logo} alt='Object Hunt Logo' className='logo w-42' />
       <h1 className='text-4xl font-extrabold font-bungee text-black'>OBJECT HUNT</h1>
     </div>
     <div className='flex flex-col gap-4'>
 
-        <Link to="/game">
+        <Link to="/solo">
             <button  className='btn btn-wide btn-error text-white font-bold text-lg tracking-wider	'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />

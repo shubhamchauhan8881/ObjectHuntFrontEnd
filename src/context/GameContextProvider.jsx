@@ -6,15 +6,22 @@ export default function GameContextProvider({children}) {
     const [musicPlay, setMusciPlay] = useState(false);
 
     const [TouchmusicVol, setTouchMusicVol] = useState(0);
-    const [loading, setLoading] = useState(false);
+    
+    const [prompt, setPrompt] = useState("-------");
+    const [guestName, setGuestName] = useState("");
+
+    const [gameOver, setGameOver] = useState(false);
+
+    const [Life, setLife] = useState(3);
 
     const context = {
-        musicVol,
-        setMusicVol,
-        TouchmusicVol,
-        setTouchMusicVol,
-        musicPlay, setMusciPlay,
-        loading, setLoading
+        musicVol,       setMusicVol,
+        TouchmusicVol,  setTouchMusicVol,
+        musicPlay,      setMusciPlay,
+        prompt,         setPrompt,
+        guestName,      setGuestName,
+        gameOver, setGameOver,
+        Life, setLife
     }
   return (
     <>

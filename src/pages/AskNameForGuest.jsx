@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import GameContext from '../context/GameContext'
 
 export default function AskNameForGuest() {
+  const { guestName,setGuestName} = useContext(GameContext);
+  const handleGuestSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = "/game/?mode=guest";
+  }
   return (
-    <form className='flex flex-col gap-4 text-black '>
+    <form className='flex flex-col gap-4 text-black' onSubmit={handleGuestSubmit}>
         <div>
             <h1 className='text-3xl font-bold font-bungee'>GUEST MODE</h1>
             <p>To play multiplayer online with your friends you need to login first.</p>
@@ -10,7 +16,7 @@ export default function AskNameForGuest() {
 
         <div>
             <span>Your Name</span>
-            <input type="text" className="input input-bordered input-seconadary bg-transparent w-full " required/>
+            <input value={guestName} onChange={(e)=> setGuestName(e.target.value)} type="text" className="input input-bordered input-seconadary bg-transparent w-full " required/>
         </div>
 
         <button className='btn btn-primary font-bold text-lg tracking-wider	'>

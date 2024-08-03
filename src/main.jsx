@@ -9,6 +9,8 @@ import PopupContextProvider from './context/PopupContextProvider.jsx';
 import GameContextProvider from './context/GameContextProvider.jsx';
 import PlayPage from './pages/PlayPage.jsx'
 import GamePage from './pages/GamePage.jsx';
+import AuthProvider from './context/AuthProvider.jsx';
+import SoloGamePlay from './pages/SoloGamePlay.jsx'
 
 const router = createBrowserRouter([
     {
@@ -25,8 +27,12 @@ const router = createBrowserRouter([
                 element:<PlayPage />,
             },
             {
-                path:'/game',
-                element:<GamePage/>
+                path:'/game/:roomcode',
+                element:<GamePage />
+            },
+            {
+                path:'/solo',
+                element:<SoloGamePlay />
             }
         ]
     }
@@ -35,10 +41,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <GameContextProvider>
-            <PopupContextProvider>
-                <RouterProvider router={router} />
-            </PopupContextProvider>
-        </GameContextProvider>
+        <AuthProvider>
+            <GameContextProvider>
+                <PopupContextProvider>
+                    <RouterProvider router={router} />
+                </PopupContextProvider>
+            </GameContextProvider>
+        </AuthProvider>
     </React.StrictMode>,
 )

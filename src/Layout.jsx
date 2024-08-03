@@ -6,9 +6,11 @@ import { useContext, useEffect, useRef } from "react";
 import GameContext from "./context/GameContext";
 
 import bgAudio from './assets/gameaudio.mp3';
+import AuthContext from "./context/AuthContext";
 
 export const Layout = () => {
-    const {loading , musicVol, musicPlay} = useContext(GameContext)
+    const { musicVol, musicPlay} = useContext(GameContext)
+    const {loading, error} = useContext(AuthContext);
     
     const audio = useRef()
     audio.current?.setAttribute('loop', true)
@@ -17,7 +19,6 @@ export const Layout = () => {
 
 
     useEffect(() =>{
-        console.log(musicPlay)
         if(musicPlay){
             audio.current.volume = musicVol/100;
             audio.current?.play();
@@ -35,7 +36,7 @@ export const Layout = () => {
             {/* opop */}
             <PopUp/>
             <SettingsButton/>
-            { loading && <Loader/> }
+            { (loading || error) && <Loader/> }
             <audio src={bgAudio} ref={audio} hidden></audio>
         </div>
     )

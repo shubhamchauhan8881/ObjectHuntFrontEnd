@@ -6,7 +6,7 @@ export default function SettingsPage() {
   return (
     <div className='flex flex-col gap-8 text-black '>
 
-        <h1 className='text-3xl font-bold font-bungee'>Settings</h1>
+        <h1 className='text-4xl font-extrabold font-bungee'>Settings</h1>
 
         <div>
           <p className='font-bold'>Music Volume</p>

@@ -1,41 +1,62 @@
-import React, { useContext } from 'react'
-import PopupContext from '../context/PopupContext'
+
+import { useContext, useState } from "react";
+import PopupContext from "../context/PopupContext";
+import AuthContext from "../context/AuthContext";
 
 export default function RegisterPage() {
-    const {ShowPopUp} = useContext(PopupContext)
+
+    const { ShowPopUp, HidePopUp } = useContext(PopupContext)
+    const {registerUser} = useContext(AuthContext)
+    const [formData, setFormdata] = useState({
+      name:"",
+      username:"",
+      password:"",
+    })
+
+    const handleFormSubmit =async (e) =>{
+      e.preventDefault();
+      if( await registerUser(formData.name, formData.username, formData.password)) HidePopUp();
+    }
+
+
   return (
-      <form className='flex flex-col gap-4 text-black '>
+      <form className='flex flex-col gap-4 text-black ' onSubmit={handleFormSubmit}>
         <div>
-          <h1 className='text-3xl font-bold font-bungee'>Register</h1>
+          <h1 className='text-4xl font-extrabold font-bungee'>Register</h1>
           <p>Register yourself to play online with your friends.</p>
         </div>
         
         <div>
           <span>Your Name</span>
           <input
+            value={formData.name}
+            onChange={(e)=> setFormdata(  {...formData, name:e.target.value} ) }
             type="text"
-            className="input input-bordered input-seconadary bg-transparent w-full " />
+            className="input input-bordered bg-transparent w-full " required/>
         </div>
 
         <div>
           <span>Your Email</span>
           <input
-            type="text"
-            className="input input-bordered input-seconadary bg-transparent w-full " />
+            value={formData.username}
+            onChange={(e)=> setFormdata({...formData, username:e.target.value})}
+            type="email"
+            className="input input-bordered bg-transparent w-full " required/>
         </div>
 
         <div>
           <span>Your Passoword</span>
           <input
-            type="text"
-            className="input input-bordered input-seconadary bg-transparent w-full " />
+            value={formData.password}
+            onChange={(e)=> setFormdata({...formData, password:e.target.value}) }
+            type="password"
+            className="input input-bordered bg-transparent w-full " required/>
         </div>
 
-        <button className='btn btn-primary font-bold text-lg tracking-wider'>
+        <button type='submit' className='btn btn-primary font-bold text-lg tracking-wider'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           </svg>
-
           Submit
         </button>
 
