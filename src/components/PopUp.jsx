@@ -25,7 +25,7 @@ export default function PopUp(){
     };
 
     return (
-        <div ref={bg} onClick={handleHiding} className={ isVisible ? 'absolute top-0 left-0 right-0 bottom-0 bg-secondary/50 flex items-center justify-center backdrop-blur-sm px-8':"hidden"}>
+        <div ref={bg} onClick={handleHiding} className={ isVisible ? 'absolute top-0 left-0 right-0 bottom-0 bg-slate-900/50 flex items-center justify-center backdrop-blur-[2px] px-8':"hidden"}>
             <div className='content-wrapper bg-accent shadow-white shadow-md rounded-md relative w-full'>
                 <div className="absolute right-1 top-1">
                     <button  onClick={()=>HidePopUp()}>

@@ -2,9 +2,9 @@ import React, { useContext } from 'react'
 import logo from '../assets/ObjHuntLogo.png';
 import Footer from '../components/Footer';
 import PopupContext from '../context/PopupContext';
+import { Link } from 'react-router-dom';
 export default function PlayPage() {
-
-
+    
     const {ShowPopUp} = useContext(PopupContext);
 
   return (
@@ -15,15 +15,17 @@ export default function PlayPage() {
       <h1 className='text-4xl font-extrabold font-bungee text-black'>OBJECT HUNT</h1>
     </div>
     <div className='flex flex-col gap-4'>
-    
-        <button  className='btn btn-wide btn-error text-white font-bold text-lg tracking-wider	'>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-            </svg>
-            START
-        </button>
 
-        <div className="divider">OR</div>
+        <Link to="/game">
+            <button  className='btn btn-wide btn-error text-white font-bold text-lg tracking-wider	'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                </svg>
+                START
+            </button>
+        </Link>
+
+        <div className="divider">Multiplayer</div>
 
         <button className='btn btn-primary font-bold text-lg tracking-wider'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
