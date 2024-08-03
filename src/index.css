@@ -87,9 +87,6 @@
 
 
 @layer utilities {
-
-  
-
   .stylish-btn{
     padding: 0.6em 1.3em;
     font-weight: 900;
@@ -108,4 +105,19 @@
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em black;
   }
+
+}
+
+
+.main-app{
+  background-image: url(./assets/bg.png);
+  background-attachment: fixed;
+  background-size:fill;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.team-list li:before {
+  content: "👤";
+  margin-right:4px;
 }

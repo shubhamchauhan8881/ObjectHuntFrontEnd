@@ -52,7 +52,7 @@ export default function SoloGamePlay() {
                     }
                 )
                 if(res.data.answer === true){
-                    IncreaseScore(50);
+                    IncreaseScore(150);
                     setImageData(null)
                     setCounter(Timer(30))
 
@@ -60,7 +60,6 @@ export default function SoloGamePlay() {
                     setLife(c=>c-1)
                     if(Life <=1){
                         setGameOver(true);
-                        setScore(0)
                     }else{
                         setError("Oops! That wasnt the object we were expecting!. Hunt for the next object.")
                         setCounter(Timer(30))
@@ -117,17 +116,25 @@ export default function SoloGamePlay() {
 
     if(gameOver)return (
         <>
-            <div className='bg-accent/40 h-full gap-y-1 flex flex-col justify-center  items-center overflow-hidden relative'>
-                <p className='text-3xl font-bungee'>Game Over</p>
-                <p className='text-7xl font-bungee'>{score}</p>
-                <p></p>
-                <p>Highest Score : {Highscore}</p>
+            <div className='text-black h-full gap-y-1 flex flex-col justify-evenly  items-center overflow-hidden relative'>
+                <p className='text-5xl font-bungee font-extrabold'>Game Over</p>
+                <div className='text-center'>
+                    <p className='text-2xl font-bold'>Score</p>
+                    <p className='text-7xl font-bungee font-extrabold'>{score}</p>
+                </div>
+
+                <div className='text-center'>
+                    <p className='text-lg font-bold'>Highest Score</p>
+                    <p className='text-5xl font-bungee font-extrabold'>{Highscore}</p>
+                </div>
                 <Confetti width={900} height={900} recycle={false}/>
 
-                <button className='btn btn-wide mt-8 btn-outline btn-secondary' onClick={playAgain}>Play Again</button>
-                <Link to='/'>
-                    <button className='btn btn-wide mt-8 btn-outline btn-secondary' onClick={playAgain}>Return homepage</button>
-                </Link>
+                <div className='text-center'>
+                    <button className='btn btn-wide mt-8 btn-outline' onClick={playAgain}>Play Again</button>
+                    <Link to='/'>
+                        <button className='btn btn-wide mt-8 btn-outline' onClick={playAgain}>Return homepage</button>
+                    </Link>
+                </div>
             </div>
         </>
     )

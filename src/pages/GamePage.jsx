@@ -47,16 +47,7 @@ export default function GamePage() {
 
         setTimeout(()=>copytext.current.textContent = "copy" , 2000)
     }
-    // useEffect(()=>{
-    //     const t = setInterval(()=>{
-    //         if(count<=0){setCount(30)}
-    //         else{
-    //             setCount(count=>count-1);
-    //         }
-    //     }, 1000)
-
-        return ()=> clearInterval(t)
-    }, [count]);
+   
   return (
     
     <div className='bg-accent/40 h-full gap-y-1 flex flex-col justify-start items-strech'>

@@ -29,7 +29,7 @@ export const Layout = () => {
     }, [audio, musicPlay, musicVol])
 
     return (
-        <div className="relative h-screen w-full sm:max-w-md mx-auto">
+        <div className="relative h-screen w-full sm:max-w-md mx-auto main-app">
             <Outlet />
         
 

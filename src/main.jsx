@@ -11,6 +11,7 @@ import PlayPage from './pages/PlayPage.jsx'
 import GamePage from './pages/GamePage.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
 import SoloGamePlay from './pages/SoloGamePlay.jsx'
+import AboutPage from './pages/AboutPage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path:'/solo',
                 element:<SoloGamePlay />
+            },
+            {
+                path:'/about',
+                element:<AboutPage />
             }
         ]
     }

@@ -10,7 +10,7 @@ export default function HomePage() {
   const {user} = useContext(AuthContext);
 
   return (
-    <div className='bg-accent h-full flex flex-col justify-evenly items-center'>
+    <div className=' h-full flex flex-col justify-evenly items-center'>
 
       <div className='flex flex-col justify-evenly items-center'>
         <img src={logo} alt='Object Hunt Logo' className='logo w-42' />
