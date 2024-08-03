@@ -49,17 +49,14 @@ export default function GamePage() {
     }
     // useEffect(()=>{
     //     const t = setInterval(()=>{
-    //         if(count<=0){
-    //             alert("Sorry, time is up!")
-    //             clearInterval(t)
-    //         }
+    //         if(count<=0){setCount(30)}
     //         else{
     //             setCount(count=>count-1);
     //         }
     //     }, 1000)
 
-    //     return ()=> clearInterval(t)
-    // }, [count]);
+        return ()=> clearInterval(t)
+    }, [count]);
   return (
     
     <div className='bg-accent/40 h-full gap-y-1 flex flex-col justify-start items-strech'>
