@@ -112,7 +112,7 @@
 .main-app{
   background-image: url(./assets/bg.png);
   background-attachment: fixed;
-  background-size:fill;
+  background-size:cover;
   background-position: center center;
   background-repeat: no-repeat;
 }

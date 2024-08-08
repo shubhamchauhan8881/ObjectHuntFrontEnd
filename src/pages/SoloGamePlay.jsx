@@ -132,7 +132,7 @@ export default function SoloGamePlay() {
                 <div className='text-center'>
                     <button className='btn btn-wide mt-8 btn-outline' onClick={playAgain}>Play Again</button>
                     <Link to='/'>
-                        <button className='btn btn-wide mt-8 btn-outline' onClick={playAgain}>Return homepage</button>
+                        <button className='btn btn-wide mt-8 btn-outline'>Return homepage</button>
                     </Link>
                 </div>
             </div>

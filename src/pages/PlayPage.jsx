@@ -3,9 +3,17 @@ import logo from '../assets/lo.png';
 import Footer from '../components/Footer';
 import PopupContext from '../context/PopupContext';
 import { Link } from 'react-router-dom';
+import Axios from '../utils/axios'
+
 export default function PlayPage() {
     
     const {ShowPopUp} = useContext(PopupContext);
+
+    const createRoom = async () => {
+        let axios = new Axios(true)
+        let res = await axios.agent.post("/room/create/")
+        window.location.href = `/game/${res.data.room_id}/`
+    }
 
   return (
     <div className='h-full flex flex-col justify-evenly items-center'>
@@ -27,7 +35,7 @@ export default function PlayPage() {
 
         <div className="divider">Multiplayer</div>
 
-        <button className='btn btn-primary font-bold text-lg tracking-wider'>
+        <button className='btn btn-primary font-bold text-lg tracking-wider' onClick={createRoom}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>

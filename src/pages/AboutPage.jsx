@@ -4,7 +4,7 @@ import logo from '../assets/lo.png';
 export default function AboutPage() {
   return (
 
-      <div className='h-full bg-[#f7904187] flex flex-col text-black justify-evenly gap-8 items-center overflow-y-scroll p-4 pb-16 about-page'>
+      <div className='h-full bg-black/15 backdrop-blur-[3px] flex flex-col text-black justify-evenly gap-8 items-center overflow-y-scroll p-4 pb-16 about-page'>
 
         <div className='flex flex-col justify-evenly items-center'>
           <img src={logo} alt='Object Hunt Logo' className='logo w-42' />
@@ -29,12 +29,12 @@ export default function AboutPage() {
         <h2 className='mb-2 font-bungee font-extrabold text-2xl'>Our Team</h2>
         <p>Object Hunt is a final year project developed by a group of passionate Computer Science and Engineering students from Babu Banarasi Das University (BBDU), class of 2021-2025. Our team members include:</p>
         <ul className="team-list grid grid-cols-2 gap-2 mt-2">
-          <li className='px-1 font-semibold bg-accent/50 rounded-full py-1'>Adarsh Kushwaha</li>
-          <li className='px-1 font-semibold bg-accent/50 rounded-full py-1'>Mohammad Adnan</li>
-          <li className='px-1 font-semibold bg-accent/50 rounded-full py-1'>Shubham Chauhan</li>
-          <li className='px-1 font-semibold bg-accent/50 rounded-full py-1'>Prashant Pandey</li>
-          <li className='px-1 font-semibold bg-accent/50 rounded-full py-1'>Vinay Kumar</li>
-          <li className='px-1 font-semibold bg-accent/50 rounded-full py-1'>Vishnu Rajbhar</li>
+          <li className='p-1 text-sm font-semibold bg-accent/30 rounded-full'>Adarsh Kushwaha</li>
+          <li className='p-1 text-sm font-semibold bg-accent/30 rounded-full'>Mohammad Adnan</li>
+          <li className='p-1 text-sm font-semibold bg-accent/30 rounded-full'>Shubham Chauhan</li>
+          <li className='p-1 text-sm font-semibold bg-accent/30 rounded-full'>Prashant Pandey</li>
+          <li className='p-1 text-sm font-semibold bg-accent/30 rounded-full'>Vinay Kumar</li>
+          <li className='p-1 text-sm font-semibold bg-accent/30 rounded-full'>Vishnu Rajbhar</li>
         </ul>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React , { useState } from 'react'
 import AuthContext from './AuthContext';
 import { jwtDecode } from 'jwt-decode';
 import Axios from '../utils/axios';
@@ -61,16 +61,13 @@ export default function AuthProvider({children}) {
             setError("Registration Successful");
             return res;
         } catch (error) {
-            console.log(error)
+
             if(error.response.status === 400) {
                 setError(error.response.data.username)
             }else{
                 setError("error ocurred. Please check your internet connection.")
             }
-        }finally{
-            setLoading(false);
         }
-        
         return false;
     }
 
