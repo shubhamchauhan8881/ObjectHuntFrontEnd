@@ -6,6 +6,8 @@ import AskNameForGuest from '../pages/AskNameForGuest';
 import SettingsPage from '../pages/SettingsPage';
 import AskRoomCode from './AskRoomCode';
 import UserProfile from '../pages/UserProfile';
+import HowToPlay from './HowToPlay';
+
 export default function PopUp(){
 
     const {isVisible, HidePopUp, page } = useContext(PopupContext)
@@ -18,7 +20,8 @@ export default function PopUp(){
         "askName": <AskNameForGuest/>,
         "settings":<SettingsPage/>,
         "askRoomCode": <AskRoomCode/>,
-        "user":<UserProfile/>
+        "user":<UserProfile/>,
+        "howtoplay": <HowToPlay />
     }
  
     const handleHiding = (e)=>{

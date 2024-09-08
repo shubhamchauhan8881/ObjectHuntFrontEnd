@@ -58,6 +58,7 @@ export default function AuthProvider({children}) {
                     "password": password
                 }
             )
+            setLoading(true);
             setError("Registration Successful");
             return res;
         } catch (error) {
@@ -68,6 +69,7 @@ export default function AuthProvider({children}) {
                 setError("error ocurred. Please check your internet connection.")
             }
         }
+        setLoading(true);
         return false;
     }
 
