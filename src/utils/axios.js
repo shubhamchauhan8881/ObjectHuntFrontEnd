@@ -5,8 +5,8 @@ import dayjs from "dayjs";
 
 class Axios{
     agent;
-    url = "http://127.0.0.1:8000/api/v1";
-    // url = "https://ec3f-2409-40e3-46-f66a-ace7-a56b-beb4-6c7.ngrok-free.app/api/v1";
+    // url = "http://127.0.0.1:8000/api/v1";
+    url = "https://ec3f-2409-40e3-46-f66a-ace7-a56b-beb4-6c7.ngrok-free.app/api/v1";
     constructor(authMode = false) {
         if (authMode === false) {
             const instance = axios.create({
